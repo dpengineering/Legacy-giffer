@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DPEA Giffer</title>
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+	 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	 
+	 <script src="ace/ace.js" charset="utf-8" data-ace-base="src" ></script>
+	 <script src="ace/theme-arduinoCoby.js" charset="utf-8"></script>
+	 <script src="ace/mode-coby.js" charset="utf-8"></script>
+	 <script src="lib/gif.js"></script>
+	 <script src="lib/bootstrap.min.js"></script>
+	 <script src="lib/FileSaver.js"></script>
+	 <script src="js/main.js"></script>
+</head>
+<body onload="Main.init()">
+
+	<div id="sub-container">
+    <div  id="editor-container">
+	<ul id="gui">
+     <li> <button onclick="Main.saveCode()" id="save-code" type="button" class="btn btn-success">Save Code</button></li>
+	 <li> <button style="display:none" onclick="Main.exportPage()" id="export-page" type="button" class="btn btn-info">Export Page</button></li>
+	<li>  <input type="text" id="userName" maxlength="15" placeholder="Your Name here"></input></li>
+	<li>  <input type="number" id="exerciseNum" min="0" style="width:100px" max="99" placeholder="Exercise #"></input></li>
+	  </ul>
+      <div id="editor"></div>
+	  <div id="console_holder">
+	  <div id="consoleMsg"></div>
+      <div id="console"></div>
+	  </div>
+	  
+      <button onclick="Main.runCode()" id="run-btn" type="button" class="btn btn-lg btn-primary">Gif It</button>
+    </div>
+	<ul class="horiz" id="side">
+	<li><div id="pEditor">	
+	</div></li>
+	
+	<li><div id="preview">
+	</div></li>
+	</ul>
+	</div>
+</body>
+</html>
