@@ -441,11 +441,11 @@ var Main = new(function() {
     function potentiometerControls() {
         var html = "Potentiometer Values: </br><hr>";
         for (var i = 0; i < pValues.length; i++) {
-            html += '<ul class="horiz"><li><input type="number" min="0" max="1023" class="pBox form-control" onchange="changePValue(' + i + ',this.value)"value="' + pValues[i] + '"></input></li>';
-            html += '<li><button type="button" class="btn btn-danger delete" onclick="deletePValue(' + i + ')">Delete</button></li></ul>';
+            html += '<ul class="horiz"><li><input type="number" min="0" max="1023" class="pBox form-control" onchange="Main.changePValue(' + i + ',this.value)"value="' + pValues[i] + '"></input></li>';
+            html += '<li><button type="button" class="btn btn-danger delete" onclick="Main.deletePValue(' + i + ')">Delete</button></li></ul>';
             html += "<hr>";
         }
-        html += '<button type="button" onclick="addPValue()" class="btn btn-primary">Add Value</button>';
+        html += '<button type="button" onclick="Main.addPValue()" class="btn btn-primary">Add Value</button>';
         document.getElementById("pEditor").innerHTML = html;
     }
 
